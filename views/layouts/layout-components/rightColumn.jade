@@ -1,0 +1,56 @@
+mixin rightColumn()
+   #right_content_cell
+      #right_col_private.corners.gray-corners
+         div
+            span#last_purchases_spl_title Мои коллекции
+            #last_purchases_spl.fast_basket
+               .item
+                  a.title(href="/kollekcii-knig/podarki-dlya-derzhateley-kart-tinkoff/") Подарки для держателей карт Tinkoff!
+                  br
+               .item
+                  a.title(href="/kollekcii-knig/dve-knigi-v-podarok-ot-prime-star-i-litres/") Две книги в подарок от Prime Star и ЛитРес!
+                  br
+               .item
+                  a.title(href="/kollekcii-knig/podarki-dlya-derzhateley-kart-tinkoff/") Подарки для держателей карт Tinkoff!
+                  br
+               .item
+                  a.title(href="/kollekcii-knig/dve-knigi-v-podarok-ot-prime-star-i-litres/") Две книги в подарок от Prime Star и ЛитРес!
+                  br
+               .item
+                  a.title(href="/kollekcii-knig/podarki-dlya-derzhateley-kart-tinkoff/") Подарки для держателей карт Tinkoff!
+                  br
+               .item
+                  a.title(href="/kollekcii-knig/dve-knigi-v-podarok-ot-prime-star-i-litres/") Две книги в подарок от Prime Star и ЛитРес!
+                  br
+      #buycomp_overlay
+         #buycomp_overlay_i
+      script(type="text/javascript").
+         function AjaxBuyBookComp(obj,artid) {
+         document.getElementById("buycomp_overlay_i").innerHTML='<p id="buycomp_overlay_load">Идет загрузка...</p>';
+         $(obj).overlay({
+         // effect:'apple',
+         /*start:{top:'50%',left:'50%'},*/
+         speed:333,
+         top:'center',
+         fixed:false,
+         onClose: function() {$.mask.close();},
+         onLoad: function() {
+         GUJ.PutRequest({
+         url: '/pages/ajax_buy_discount/',
+         params : {art: artid},
+         TargetForHTML:document.getElementById('buycomp_overlay_i'),
+         OnHTML:function(HTML){
+         obj.onclick=function(){$(this).data("overlay").load();}
+         }
+         });
+         $(document).mask({
+         color: '#000',
+         loadSpeed: 200,
+         opacity: 0.7,
+         onClose: function() {$(obj).data("overlay").close();}
+         });
+         }
+         });
+         $(obj).data("overlay").load();
+         }
+      .cont_seo

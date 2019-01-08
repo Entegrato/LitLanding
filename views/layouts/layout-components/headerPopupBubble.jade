@@ -1,0 +1,224 @@
+mixin headerPopupBubble()
+   .header-popup(data-header_popup="info")
+      a.close
+      .header-popup__inner
+         .popup-info-spam-tickets
+   .header-popup.header-popup_right-arrow.my-books-popup(data-header_popup="my_books")
+      a.close
+      .my-books-wrapper
+         .my-books-list
+            a.my-books-item(href="/pages/my_books_all/")
+               span.my-books-item__name Все
+               span.my-books-item__status
+               span.my-books-item__counter
+            a.my-books-item(href="/pages/my_books_fresh/")
+               span.my-books-item__name Мои
+               span.my-books-item__status
+               span.my-books-item__counter 53
+            a.my-books-item(href="/pages/my_views/")
+               span.my-books-item__name Просмотренные
+               span.my-books-item__status
+               span.my-books-item__counter
+            a.my-books-item.my-books-item_wishlist(href="/pages/new_liked/")
+               span.my-books-item__name Отложенные
+               span.my-books-item__status
+               span.my-books-item__counter 36
+            a.my-books-item.my-books-item_basket(href="/pages/new_basket/")
+               span.my-books-item__name Корзина
+               span.my-books-item__status
+               span.my-books-item__counter
+            a.my-books-item.my-books-item_promo(href="/pages/my_promo_actions/")
+               span.my-books-item__name Мои акции
+               span.my-books-item__status
+               span.my-books-item__counter
+            a.my-books-item.my-books-item_sub.bought_collection(href="/kollekcii-knig/podarki-dlya-derzhateley-kart-tinkoff/")
+               span.my-books-item__name Подарки для держателей карт Tinkoff!
+            a.my-books-item.my-books-item_sub.bought_collection(href="/kollekcii-knig/dve-knigi-v-podarok-ot-prime-star-i-litres/")
+               span.my-books-item__name Две книги в подарок от Prime Star и ЛитРес!
+   .header-popup(data-header_popup="genres")
+      a.close
+      .header-popup__inner
+         .bubble_back
+         .bubble_genres(style="")
+            .bubble_genre
+               h2.bubble_head
+                  a(href="/legkoe-chtenie/") легкое чтение
+               ul.bubble_list
+                  li
+                     a(href="/knigi-detektivy/" title="10 поджанров, 17766 книг") детективы
+                  li
+                     a(href="/knigi-fantastika/" title="14 поджанров, 22308 книг") фантастика
+                  li
+                     a(href="/knigi-boeviki-ostrosugetnaya/" title="6 поджанров, 12558 книг") боевики, остросюжетная литература
+                  li
+                     a(href="/knigi-fentezi/" title="16 поджанров, 19154 книги") фэнтези
+                  li
+                     a(href="/knigi-priklucheniya/" title="7 поджанров, 14840 книг") приключения
+                  li
+                     a.genres_more(href="javascript:MoreGenres(201583)") Все 12
+            .bubble_genre
+               h2.bubble_head
+                  a(href="/sereznoe-chtenie/") серьезное чтение
+               ul.bubble_list
+                  li
+                     a(href="/knigi-sovremennaya-proza/" title="5 поджанров, 38809 книг") современная проза
+                  li
+                     a(href="/sereznoe-chtenie/ob-istorii-serezno/" title="4 поджанра, 13642 книги") об истории серьезно
+                  li
+                     a(href="/knigi-publicistika/biografii-memuary/" title="11630 книг") биографии и мемуары
+                  li
+                     a(href="/klassicheskaya-literatura/" title="15 поджанров, 49335 книг") классическая литература
+                  li
+                     a(href="/sereznoe-chtenie/ctihi-poeziya/" title="3 поджанра, 12917 книг") cтихи, поэзия
+                  li
+                     a.genres_more(href="javascript:MoreGenres(201591)") Все 6
+            .bubble_genre
+               h2.bubble_head
+                  a(href="/istoriya/") история
+               ul.bubble_list
+                  li
+                     a(href="/knigi-detektivy/istoricheskie/" title="1008 книг") исторические детективы
+                  li
+                     a(href="/populyarno-ob-istorii/" title="1368 книг") популярно об истории
+                  li
+                     a(href="/knigi-priklucheniya/istoricheskie/" title="2467 книг") исторические приключения
+                  li
+                     a(href="/knigi-sovremennaya-proza/istoricheskaya-literatura/" title="6547 книг") историческая литература
+                  li
+                     a(href="/knigi-publicistika/biografii-memuary/" title="11630 книг") биографии и мемуары
+                  li
+                     a.genres_more(href="javascript:MoreGenres(201599)") Все 12
+            .bubble_genre
+               h2.bubble_head
+                  a(href="/znaniya-navyki/biznes/") бизнес-книги
+               ul.bubble_list
+                  li
+                     a(href="/biznes-knigi/lichnaya-effektivnost/" title="1272 книги") личная эффективность
+                  li
+                     a(href="/biznes-knigi/o-biznese-populyarno/" title="15 поджанров, 7610 книг") о бизнесе популярно
+                  li
+                     a(href="/biznes-knigi/lichnye-finansy/" title="1803 книги") личные финансы
+                  li
+                     a(href="/biznes-knigi/zarubezhnaya-delovaya-literatura/" title="7776 книг") зарубежная деловая литература
+                  li
+                     a(href="/biznes-knigi/kadrovyj_menedzhment/" title="8 поджанров, 1553 книги") кадровый менеджмент
+                  li
+                     a.genres_more(href="javascript:MoreGenres(5003)") Все 30
+            .bubble_genre
+               h2.bubble_head
+                  a(href="/znaniya-navyki/") знания и навыки
+               ul.bubble_list
+                  li
+                     a(href="/znaniya-navyki/uchebnaya-nauchnaya-literatura/" title="16 поджанров, 99552 книги") учебная и научная литература
+                  li
+                     a(href="/knigi-psihologiya/samorazvitiye-lichnostnyy-rost/" title="4311 книг") саморазвитие / личностный рост
+                  li
+                     a(href="/knigi-nauka-obrazovanie/nauchno-populyarnaya-literatura/" title="5876 книг") научно-популярная литература
+                  li
+                     a(href="/znaniya-navyki/biznes/" title="30 поджанров, 38648 книг") бизнес-книги
+                  li
+                     a(href="/knigi-ezoterika/" title="11 поджанров, 6838 книг") эзотерика
+                  li
+                     a.genres_more(href="javascript:MoreGenres(201623)") Все 12
+            .bubble_genre
+               h2.bubble_head
+                  a(href="/psihologiya-motivaciya/") психология, мотивация
+               ul.bubble_list
+                  li
+                     a(href="/knigi-psihologiya/" title="18 поджанров, 15494 книги") книги по психологии
+                  li
+                     a(href="/knigi-psihologiya/samorazvitiye-lichnostnyy-rost/" title="4311 книг") саморазвитие / личностный рост
+                  li
+                     a(href="/psihologiya-motivaciya/religiya-duhovnaya-literatura/" title="16 поджанров, 8331 книга") религия и духовная литература
+                  li
+                     a(href="/knigi-ezoterika/" title="11 поджанров, 6838 книг") эзотерика
+                  li
+                     a(href="/knigi-publicistika/biografii-memuary/" title="11630 книг") биографии и мемуары
+                  li
+                     a.genres_more(href="javascript:MoreGenres(201631)") Все 7
+            .bubble_genre
+               h2.bubble_head
+                  a(href="/sport-zdorove-krasota/") спорт, здоровье, красота
+               ul.bubble_list
+                  li
+                     a(href="/sport-zdorove-krasota/medicina-i-zdorove/" title="8 поджанров, 10600 книг") медицина и здоровье
+                  li
+                     a(href="/sport-zdorove-krasota/sport/" title="2 поджанра, 3572 книги") спорт
+                  li
+                     a(href="/sport-zdorove-krasota/krasota/" title="4 поджанра, 929 книг") красота
+                  li
+                     a(href="/erotika-seks/seksualnyye-rukovodstva/" title="166 книг") секс / секс-руководства
+            .bubble_genre
+               h2.bubble_head
+                  a(href="/hobbi-dosug/") хобби, досуг
+               ul.bubble_list
+                  li
+                     a(href="/knigi-dom-semya/prikladnaya-literatura/" title="3133 книги") прикладная литература
+                  li
+                     a(href="/knigi-krasota-zdorove/sport-fitnes/" title="3499 книг") спорт / фитнес
+                  li
+                     a(href="/knigi-ezoterika/yoga/" title="92 книги") йога
+                  li
+                     a(href="/knigi-dom-semya/rukodeliye-remesla/" title="4091 книга") рукоделие и ремесла
+                  li
+                     a(href="/knigi-iskusstvo/izobrazitelnoe-iskusstvo/" title="2478 книг") изобразительное искусство
+                  li
+                     a.genres_more(href="javascript:MoreGenres(201639)") Все 19
+            .bubble_genre
+               h2.bubble_head
+                  a(href="/dom-dacha/") дом, дача
+               ul.bubble_list
+                  li
+                     a(href="/dom-dacha/domashnee-hozyaystvo/" title="412 книг") домашнее хозяйство
+                  li
+                     a(href="/knigi-dom-semya/rukodeliye-remesla/" title="4091 книга") рукоделие и ремесла
+                  li
+                     a(href="/knigi-dom-semya/hobbi_uvlecheniya/" title="2192 книги") хобби / увлечения
+                  li
+                     a(href="/knigi-dom-semya/kulinariya/" title="3634 книги") кулинария
+                  li
+                     a(href="/knigi-dom-semya/sdelay-sam/" title="1561 книга") сделай сам
+                  li
+                     a.genres_more(href="javascript:MoreGenres(201647)") Все 16
+            .bubble_genre
+               h2.bubble_head
+                  a(href="/detskie-knigi/") детские книги
+               ul.bubble_list
+                  li
+                     a(href="/detskie-knigi/dlya-podrostkov/" title="1337 книг") книги для подростков
+                  li
+                     a(href="/detskie-knigi/fantastika/" title="1552 книги") детская фантастика
+                  li
+                     a(href="/detskie-knigi/zarubezhnye/" title="3554 книги") зарубежные детские книги
+                  li
+                     a(href="/detskie-knigi/priklucheniya/" title="2309 книг") детские приключения
+                  li
+                     a(href="/detskie-knigi/detskaya_pazvivayushaya_literatura/" title="3225 книг") детская познавательная и развивающая литература
+                  li
+                     a.genres_more(href="javascript:MoreGenres(5007)") Все 15
+            .bubble_genre
+               h2.bubble_head
+                  a(href="/roditelyam/") родителям
+               ul.bubble_list
+                  li
+                     a(href="/detskie-knigi/" title="15 поджанров, 29185 книг") детские книги
+                  li
+                     a(href="/knigi-dom-semya/vospitanie-detey/" title="3040 книг") воспитание детей
+                  li
+                     a(href="/knigi-psihologiya/detskaya/" title="1231 книга") детская психология
+                  li
+                     a(href="/zdorovye-detey/" title="447 книг") здоровье детей
+            .bubble_genre
+               h2.bubble_head
+                  a(href="/publicistika-periodicheskie-izdaniya/") публицистика и периодические издания
+               ul.bubble_list
+                  li
+                     a(href="/knigi-publicisticheskaya_literatura/" title="7 поджанров, 30631 книга") публицистическая литература
+                  li
+                     a(href="/periodicheskie-izdaniya/" title="4 поджанра, 29931 книга") периодические издания
+            .bubble_genre
+               h2.bubble_head
+                  a(href="/tags/samizdat/") Самиздат
+         .bubble_subgenres
+         .bubble_allgenres
+            a(href="/pages/new_genres/?atype=") Все 140 жанров

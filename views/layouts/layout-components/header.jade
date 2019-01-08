@@ -1,0 +1,119 @@
+mixin header()
+   #litres_header.litres_header
+      .header_container
+         .header_main
+            .header_block.header_logo
+               div
+                  a(href="/")
+                     span.litres_header_logo(title="ЛитРес") ЛитРес
+            .header_block.search_and_login
+               .search_and_login_inner
+                  .header_search
+                     // noindex
+                     form.header_search_form(action="/pages/rmd_search/" method="get")
+                        button#go.searchbutn.btn.btn_black(data-disabled="disabled")
+                           span Найти
+                        #q-cell
+                           input#q.top_search_input.input_text(name="q" value="" type="text" placeholder="Введите название книги или имя автора" maxlength="150" autocomplete="off")
+                           #sfac_cont
+                              #nspotlight.nspotlight
+                           script(type="text/javascript").
+                              if(!placeholders_supported) $("#q").placeholder(); sfac_init();
+                     // /noindex
+                  .header_user
+                     .header_popup_link.user_link(data-header_open="user" data-clicktag-id="profile")
+                        a.user_wrapper(href="/pages/my_settings/")
+                           span.user-logo-wrapper.user-logo-wrapper_newyear
+                              span.user_logo.header_popup_focus
+                                 span.user_avatar_dummy
+                           span.user_container
+                              span.user_name Entegrato
+                              span.user_cash
+                                 | 999,01 
+                                 span.litres_ruble ₽
+            .header_block.header_info
+               #header-info-link.user_info.spam-tickets.clicktag(data-msg-count="0" data-clicktag-id="head_bell")
+                  .header_popup_link.user_info_icon(data-header_open="info")
+                     a
+               .user_action
+                  .header_popup_link(data-header_open="my_books" data-hover_zone_class="btn__content" data-click_zone_class="btn__dropdown")
+                     a.user_action_button.user_books.btn.btn_green(href="/pages/my_books_all/")
+                        .btn.btn_user-books
+                           .btn__wrapper
+                              .btn__content Мои книги
+                              .btn__dropdown.clicktag(data-clicktag-id="my_books_arrow")
+                                 .icon-container
+                        span.popup_link_sticker(data-count="2") 2
+         .header_menu
+            .header_menu_inner
+               ul.header_nav.right_nav
+                  li.header_menu_item.header_popup_focus.header_popup_link(data-header_open="menu-company" data-goal="companylitres")
+                     a.header_menu_item_link(href="/o-kompanii/contactnaya-informaciya/") Компания
+               ul.header_nav.left_nav
+                  li.header_menu_item.header_popup_link(data-header_open="genres")
+                     a#genres_popup.header_menu_item_link(href="/pages/new_genres/") Жанры
+                  li.header_menu_item(data-goal="newbooks")
+                     a.header_menu_item_link(href="/novie/") Новинки
+                  li.header_menu_item(data-goal="popbooks")
+                     a.header_menu_item_link(href="/luchshie-knigi/") Популярное
+                  li.header_menu_item(data-goal="audiobooks")
+                     a.header_menu_item_link(href="/audioknigi/") Аудиокниги
+                  li.header_menu_item(data-goal="whattoreadbooks")
+                     a.header_menu_item_link(href="/chto-chitat/") Что почитать?
+                  li.header_menu_item.promo-code-link
+                     a.header_menu_item_link(href="/pages/put_money_on_account/?descr=18") Промокод
+                  li.header_menu_item.header_popup_link(data-header_open="menu-more" data-goal="stilmenu")
+                     span.header_menu_item_link Ещё
+            .header-popup(data-header_popup="menu-company")
+               a.close
+               .header-popup__inner
+                  ul.header_menu_item_submenu
+                     li.header_menu_item(data-goal="aboutcompany")
+                        a.header_menu_item_link(href="/o-kompanii/") О компании
+                     li.header_menu_item(data-goal="newsaboutcompany")
+                        a.header_menu_item_link(href="/o-kompanii/novosti/") Новости
+                     li.header_menu_item(data-goal="pressaboutlitres")
+                        a.header_menu_item_link(href="/o-kompanii/press-slugba/") Пресс-служба
+                     li.header_menu_item
+                        a.header_menu_item_link(href="/o-kompanii/contactnaya-informaciya/") Контакты
+                  ul.header_menu_item_submenu
+                     li.header_menu_item(data-goal="forpartners")
+                        a.header_menu_item_link(href="/partners/") Партнёрам
+                     li.header_menu_item(data-goal="forpublishers")
+                        a.header_menu_item_link(href="/o-kompanii/partneram/avtoram-i-izdatelstvam/") Издательствам
+                     li.header_menu_item(data-goal="forauthors")
+                        a.header_menu_item_link(href="/o-kompanii/partneram/avtoram-i-izdatelstvam/") Авторам
+                     li.header_menu_item(data-goal="ebukva")
+                        a.header_menu_item_link(href="//ebukva.litres.ru" rel="nofollow" target="_blank") Электронная Буква
+                     li.header_menu_item
+                        a.header_menu_item_link(href="/o-kompanii/biblioteka/") Библиотекам
+                  ul.header_menu_item_submenu
+                     li.header_menu_item(data-goal="helpdesk")
+                        a.header_menu_item_link(href="https://support.litres.ru/hc/ru") Служба поддержки
+            .header-popup(data-header_popup="menu-more")
+               a.close
+               .header-popup__inner
+                  ul.header_menu_item_submenu
+                     li.header_menu_item.header_menu_item__on_sale_soon(data-goal="soonsale")
+                        a.header_menu_item_link(href="/kollekcii-knig/predzakaz-so-skidkoy-30/") Предзаказ со скидкой 30%
+                     li.header_menu_item
+                        a.header_menu_item_link(href="/podborki/") Подборки
+                     li.header_menu_item(data-goal="luchshie_avtori")
+                        a.header_menu_item_link(href="/luchshie-avtori/") Популярные авторы
+                     li.header_menu_item(data-goal="hitsofanytime")
+                        a.header_menu_item_link(href="/kollekcii-knig/bestsellery-proverennye-vremenem-hudozhka/") Хиты, проверенные временем
+                     li.header_menu_item(data-goal="readbookfirst")
+                        a.header_menu_item_link(href="/kollekcii-knig/prochti-pervym/") Прочти первым
+                     li.header_menu_item(data-goal="selfpubbooks")
+                        a.header_menu_item_link(href="/selfpub/") ЛитРес: Самиздат
+                     li.header_menu_item(data-goal="chtets")
+                        a.header_menu_item_link(href="/reader/") ЛитРес: Чтец
+                     li.header_menu_item(data-goal="presentscards")
+                        a.header_menu_item_link(href="/kniga-luchshiy-podarok/") Подарочные карты
+                     li.header_menu_item(data-goal="mobileapplitres")
+                        a.header_menu_item_link(href="/app3/") Мобильные приложения
+                     li.header_menu_item
+                        a.header_menu_item_link(href="/ux-research-now/1/") ЛитРес: Исследования
+   script(language="JavaScript" type="text/javascript").
+      var GUJ = new GUAjax({Connections:2});
+   

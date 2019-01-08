@@ -1,0 +1,101 @@
+mixin footerMenu()
+   #footer_block.footer
+      #dynamics_padd
+         .max_w
+            table(border="0" cellpadding="0" cellspacing="0" align="center")
+               tbody
+                  tr
+                     th(width="20%" valign="bottom")
+                        img(alt="ЛитРес" src="https://www.litres.ru/static/litres/i/footer/logo-gray.svg" width="95" height="22")
+                     th(width="20%" valign="bottom")
+                     th(width="20%" valign="bottom") Сотрудничество
+                     th(width="20%" valign="bottom") Что почитать?
+                     th(width="20%" valign="bottom") ЛитРес в соц.сетях
+                  tr
+                     td(valign="top")
+                        a(href="/o-kompanii/") О компании
+                        a(href="/o-kompanii/contactnaya-informaciya/") Контакты
+                        a(href="https://support.litres.ru/hc/ru") Служба поддержки
+                        a(href="//support.litres.ru/hc/ru/articles/212796589" target="_blank") Возврат
+                        .site_name © ООО «ЛитРес»
+                     td(valign="top")
+                        a(href="/pages/put_money_on_account/?descr=18") Активировать купон
+                        a(href="/pages/litres_oferta/") Публичная оферта
+                        a(target="_blank" href="https://www.litres.ru/static/litres/inc/ru/privacy_policy.html")
+                           | Политика обработки
+                           br
+                           | персональных данных
+                        a(target="_blank" href="https://www.litres.ru/static/litres/inc/ru/receive_newsletters.html") Согласие на получение рассылки
+                     td(valign="top")
+                        a(href="/o-kompanii/partneram/avtoram-i-izdatelstvam/") Издательствам
+                        a(href="/o-kompanii/partneram/avtoram-i-izdatelstvam/") Авторам
+                        a(href="/o-kompanii/biblioteka/") Библиотекам
+                        a(href="/o-kompanii/partnerskie-programmy/") Партнёрам
+                        a(href="/partners/") Вебмастерам
+                     td(valign="top")
+                        a(href="/luchshie-knigi/") Бестселлеры
+                        a(href="/skoro-v-prodazhe/") Скоро в продаже
+                        a(href="/luchshie-avtori/") Популярные авторы
+                        a(href="/intervju/") Интервью с авторами
+                     td(valign="top")
+                        ul.footer_soc_icons
+                           li
+                              div
+                                 a.footer_soc_icon.footer_soc_icon_vk(href="https://vk.com/mylitres" target="_blank")
+                                 a.footer_soc_icon.footer_soc_icon_ok(href="https://ok.ru/litres" target="_blank")
+                                 a.footer_soc_icon.footer_soc_icon_fb(href="https://www.facebook.com/mylitres/" target="_blank")
+                                 a.footer_soc_icon.footer_soc_icon_inst(href="https://www.instagram.com/mylitres/" target="_blank")
+                              div
+                                 a.footer_soc_icon.footer_soc_icon_tw(href="https://twitter.com/mylitres" target="_blank")
+                                 a.footer_soc_icon.footer_soc_icon_g(href="https://plus.google.com/+litresru" target="_blank")
+                                 a.footer_soc_icon.footer_soc_icon_mail(href="https://my.mail.ru/community/litres/" target="_blank")
+                                 a.footer_soc_icon.footer_soc_icon_dzen(href="https://zen.yandex.ru/litres" target="_blank")
+            style(type="text/css").
+               .max_w .banner_genre{background:none; padding:0}
+               .partners_list span, .partners_list .ozon-ru{margin-right:30px; background-image:url('https://www.litres.ru/static/pr/partners_list.png'); cursor:pointer; height:46px; line-height:46px; display:inline-block; vertical-align:top; transition:opacity 0.3s ease 0s; float:none;}
+               .partners_list .nb{float:none; display:inline-block; vertical-align:top; height:auto; line-height:normal; margin:0; background:none;}
+               .partners_list span:hover, .partners_list .ozon-ru:hover{opacity:0.8;}
+               .partners_list .sberbank-spasibo{margin-right:30px; background-position: -925px -54px;}
+               .partners_list .vtb24{background-position:-1267px -54px; width:40px; margin-right:30px;}
+               .partners_list .vtb24:hover{background-position:-1266px 0;}
+               .partners_list .mastercard{background-position:-1458px -51px; width:222px; margin-right:30px;}
+               .partners_list .mastercard:hover{background-position:-1458px -2px;}
+               .partners_list .visa{background-position:-1720px -50px; width:185px; margin-right:30px;}
+               .partners_list .visa:hover{background-position:-1720px 0;}
+               .partners_list .domruru{background-position:-1945px -53px; width:44px; margin-right:30px;}
+               .partners_list .domruru:hover{background-position:-1945px 1px;}
+               .partners_list .komandacard{background-position:-2155px -50px; width:87px; margin-right:30px;}
+               .partners_list .komandacard:hover{background-position:-2155px 4px;}
+               .partners_list .beelinecard{background-position:-2280px -54px; width:100px; margin-right:30px;}
+               .partners_list .beelinecard:hover{background-position:-2280px 0;}
+               .partners_list .bpclub{background-position:-2417px -53px; width:95px; margin-right:30px;}
+               .partners_list .bpclub:hover{background-position:-2417px 0;}
+               .partners_list .p_bonus-mail{background-position:-2551px -50px; width:211px; margin-right:30px;}
+               .partners_list .p_bonus-mail:hover{background-position:-2551px 4px;}
+               .partners_list .halva{width: 117px; margin-right: 30px; background-position: -2788px -50px;}
+               .partners_list .halva:hover{background-position:-2788px 4px;}
+               .partners_list .sovest{background-position:-2931px -50px; width:125px; margin-right:30px;}
+               .partners_list .sovest:hover{background-position:-2931px 4px;}
+               .partners_list .rostelecom{background-position:-3089px -50px; width:94px; margin-right:0px;}
+               .partners_list .rostelecom:hover{background-position:-3089px 3px;}
+            .partners_list
+               .name Партнеры
+               span#p_kykyru.kykyru(onclick="window.open('/loyalty/kukuruza/','_blank'); return false;")
+               span#p_malina.malina(onclick="window.open('/loyalty/malina/','_blank'); return false;")
+               span#p_mnogo.mnogo-ru(onclick="window.open('/loyalty/mnogo/','_blank'); return false;")
+               a.ozon-ru(href="//www.ozon.ru/" target="_blank")
+               span#p_perekrestok.perekrestok(onclick="window.open('/loyalty/perekrestok/','_blank'); return false;")
+               span#p_sberbank.sberbank-spasibo(onclick="window.open('/loyalty/sberbank-spasibo/','_blank'); return false;")
+               span#p_vtb24.vtb24(onclick="window.open('/loyalty/vtb24/','_blank'); return false;")
+               span#p_mastercard.mastercard(onclick="window.open('/loyalty/mastercard/','_blank'); return false;")
+               span#p_visa.visa(onclick="window.open('/loyalty/visa/','_blank'); return false;")
+               span#p_domruru.domruru(onclick="window.open('/loyalty/domruru/','_blank'); return false;")
+               span#p_komandacard.komandacard(onclick="window.open('/loyalty/komandacard/ ','_blank'); return false;")
+               span#p_beelinecard.beelinecard(onclick="window.open('/loyalty/beeline/','_blank'); return false;")
+               // <span id="p_bpclub" class="bpclub" onclick="window.open('/loyalty/bp-club/','_blank'); return false;"></span>
+               span#p_bonus-mail.p_bonus-mail(onclick="window.open('https://bonus.mail.ru/?utm_source=litres&utm_medium=partners& utm_campaign=logo_bonus','_blank'); return false;")
+               span#p_halva.halva(onclick="window.open('/loyalty/halva/','_blank'); return false;")
+               span#p_sovest.sovest(onclick="window.open('/loyalty/sovest/','_blank'); return false;")
+               span#p_rostelecom.rostelecom(onclick="window.open('/loyalty/rostelecom/','_blank'); return false;")
+   script(type="text/javascript").
+      AdoptInScreenBlocks();MainDivResize(true);

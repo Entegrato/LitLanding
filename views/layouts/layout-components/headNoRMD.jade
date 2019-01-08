@@ -1,0 +1,139 @@
+mixin headNoRMD()
+	meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+	meta(charset="utf-8")
+	title= title
+	if (description)
+		meta(name="description" content= description)
+	link(rel="canonical" href="https://www.litres.ru/o-kompanii/partneram/")
+	link(rel="alternate" href="https://pda.litres.ru/o-kompanii/partneram/" media="only screen and (max-width: 640px)")
+	link(rel="StyleSheet" href="https://www.litres.ru/static/new/style.css?121024" type="text/css")
+	link(rel="StyleSheet" href="https://www.litres.ru/static/new/css/p/staticpages.css?120226" type="text/css")
+	link(rel="stylesheet" href="https://www.litres.ru/static/new/css/header.css?120322" type="text/css")
+	link(rel="stylesheet" href="https://www.litres.ru/static/new/modules/footer/css/footer.css?120368" type="text/css")
+	link(rel="search" type="application/opensearchdescription+xml" title="ЛитРес - электронные книги" href="https://www.litres.ru/static/opensearch.xml")
+	link(rel="alternate" type="application/rss+xml" href="/rss/" title="Новые книги на ЛитРес")
+	script(language="JavaScript" src="https://www.litres.ru/static/hub/js/csrf.js?118785" type="text/javascript")
+	style(type="text/css" data-source="User JavaScript and CSS extension").
+		#view_branch {
+		width: 400px;
+		}
+		span.bug_tracker_ticket_branch {
+		width: 40%;
+		}
+		span.bug_tracker_ticket_branch.edit {
+		width: 40%;
+		}
+		.bug_tracker input[type="text"] {
+		width: 400px;
+		}
+	script.
+		CSRF.init(["206348:1546973821:14767ed608ae113da1dfc294a02666d72a53932a751336161f5c18d2e29eb4c1","58690:1546973821:f3446236fc973b5bd824a9f0f078332742a83e20b49289c9fc971fc38313273a","534953:1546973821:bbfddd6ee222703ec94eaab968f8cf07c7434c1eae06b801509cb44161f14906","291843:1546973821:364c3ad32579b25957c0e023a91e7a13726a5ce3be28c85dde36c28a8e07ee2c","668132:1546973821:f5a6f803615c298e532da0d8a2b1f6ad78410f1608b59c999099fe96685fc009","127043:1546973821:f87e5cfbbedaedbb73abcb1a6e1ee05d6430c3b79e13c49d1def891949df3bbb"], 263924795);
+	script(language="JavaScript" type="text/javascript").
+		var UserLastPayment = '';
+		var UserPin = "";
+		var lib_mode = 0;
+		var litres_user_id = '263924795';
+		var ABTests = {};
+		var webpush_status = '1';
+		var my_account_email = '';
+		var litres = {
+		xportal: true,
+		libface: 1,
+		user: 263924795,
+		userCountry: 'RU',
+		name: 'Entegrato',
+		lfrom: '',
+		email: 'entegrato@gmail.com',phone: '79167458667',
+		lib_mode: 0,
+		tests: {},
+		platform: 'chrome',
+		isNewPaymentBilling: true,isNewPaymentSeries: true,
+		webpush_status: '1',
+		uilang: 'ru',
+		user_age: '32',
+		loadCss: function (url) {
+		var link = document.createElement("link");
+		link.type = "text/css";
+		link.rel = "stylesheet";
+		link.href = url;
+		document.getElementsByTagName("head")[0].appendChild(link);
+		},
+		loadJs: function (url, callback) {
+		if (document.querySelector('script[src="' + url + '"]')) {
+		if (callback) {
+		callback();
+		}
+		return;
+		}
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = url;
+		if (callback) {
+		script.onload = function () {
+		callback();
+		};
+		}
+		document.body.appendChild(script);
+		}
+		,newLogin: true,
+		askingPopup: false,
+		onetimePin: false,vkPay: true,newPayonlineRebill: true
+		}
+	script(language="JavaScript" type="text/javascript").
+		var no_adopt = false;
+	script(type="text/javascript" language="javascript").
+		var stars_data = new Object, gift_data = new Object;
+	script(language="javascript").
+		ScSrc = 'https://www.litres.ru/static/code_as.js?51760';
+	script(language="JavaScript" src="https://www.litres.ru/static/code.js?119444" type="text/javascript")
+	script(type="text/javascript" language="JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
+	script(language="JavaScript" src="https://www.litres.ru/static/sociallogin.js?119868" type="text/javascript")
+	link(rel="stylesheet" href="https://www.litres.ru/static/litres/css/payment.css?117737" type="text/css")
+	script(language="JavaScript" src="https://www.litres.ru/static/litres/js/payment.js?119683" type="text/javascript")
+	script(language="JavaScript" src="https://www.litres.ru/static/js/i18n/ru/default.js?121172" type="text/javascript")
+	script(language="JavaScript" src="https://www.litres.ru/static/js/i18n/gettext.js" type="text/javascript")
+	script(language="JavaScript" type="text/javascript").
+		var __l = __ln = function (msgid) { return msgid;};
+		var i18nGettext = new Gettext({ 'domain' : 'default',
+		'locale_data' : json_locale_data });
+		__l=function (msgid,args) {
+		return i18nGettext.strhashargs(i18nGettext.gettext(msgid),args);
+		};
+		__ln=function (msgid, msgid_plural,count,args) {
+		return i18nGettext.strhashargs(i18nGettext.ngettext(msgid, msgid_plural, count),args);
+		};
+	script(language="JavaScript" src="/static/new/js/code1.js?120393" type="text/javascript")
+	script(type="text/javascript" src="https://www.litres.ru/static/js/s/staticpages.js" language="javascript")
+	script(type="text/javascript").
+		page_atype='';
+	script(language="JavaScript" src="https://www.litres.ru/static/js/seo/seo.js?101186" type="text/javascript")
+	link(rel="SHORTCUT ICON" href="https://www.litres.ru/static/new/favicon.ico")
+	meta(name="yandex-verification" content="478d5f36769e8054")
+	meta(property="fb:page_id" content="128688247186385")
+	link(rel="apple-touch-icon" href="https://www.litres.ru/static/new/i/icon_114x114.png")
+	script(type="text/javascript" src="https://www.litres.ru/static/jquery_plugs/jquery.countdown.js")
+	script(type="text/javascript" src="https://www.litres.ru/static/jquery_plugs/moment/moment.min.js?59673")
+	meta(property="og:url" content="https://www.litres.ru/partners/")
+	meta(property="og:title" content="ЛитРес – партнерская программа магазина электронных книг")
+	meta(property="og:description" content="Мы платим до 20 процентов от всех покупок пользователей, пришедших по партнерской ссылке в течение 30 дней после перехода. Холд 0 дней. У нас самый обширный в Рунете ассортимент лицензионной литературы, который постоянно пополняется – это сотни тысяч книг на русском и иностранных языках.")
+	meta(property="og:image" content="https://www.litres.ru/static/new/i/partners/illust-partner.png")
+	meta(property="og:image:type" content="image/png")
+	meta(property="og:image:width" content="423")
+	meta(property="og:image:height" content="374")
+	meta(http-equiv="content-language" content="ru")
+	link(rel="manifest" href="https://www.litres.ru/static/manifest.json")
+	link(rel="yandex-tableau-widget" href="https://www.litres.ru/static/new/yandex-tableau-manifest.json")
+	link(type="text/css" rel="stylesheet" href="https://www.litres.ru/static/litres/modules/authorization/css/LoginPopup.css?120683")
+	link(type="text/css" rel="stylesheet" href="https://www.litres.ru/static/litres/css/p/module_country.css")
+	link(type="text/css" rel="stylesheet" href="https://www.litres.ru/static/litres/modules/phonecodes/css/phonecodes.css?117737")
+	link(type="text/css" rel="stylesheet" href="https://www.litres.ru/static/litres/modules/spam-tickets/css/spam-tickets.css?101068")
+	link(type="text/css" rel="stylesheet" href="https://www.litres.ru/static/litres/modules/no-cover/css/no-cover.css")
+	style(type="text/css").
+		.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+		.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https:/https://www.litres.ru/static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https:/https://www.litres.ru/static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https:/https://www.litres.ru/static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https:/https://www.litres.ru/static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https:/https://www.litres.ru/static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https:/https://www.litres.ru/static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+		.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+		.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_in_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_out_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bubble_pop_in{animation-duration:250ms;animation-name:fb_customer_chat_bubble_bounce_in_animation}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{background-color:#fff;height:100%;overflow:hidden;position:fixed;visibility:hidden;width:100%}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_v2_mobile_chat_started{0%{opacity:0;top:20px}100%{opacity:1;top:0}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}
+	style(type="text/css").
+		.mrc__translayer {background: rgba(255,255,255,0.7); position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 999999; display: none}
+		.mrc__translayer:before {background: url(//my1.imgsmail.ru/mail/ru/images/my/compass/static/progress/preloader_grayonwhite.gif) no-repeat center center; bottom: 0; content: ""; display: block; left: 0; margin: auto; position: absolute; right: 0; top: 0; height: 12px; width: 64px;}
+		.mrc__translayer_on iframe {box-shadow: 0 2px 5px rgba(0,0,0,0.35); visibility: hidden;}.mrc__translayer_on {background-image:none;}

@@ -1,13 +1,164 @@
-doctype html
-html
-   head
-      title= title
-      if (description)
-         meta(name="description" content= description)
-      meta(charset='utf-8')
-      meta(name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1')
-      script(src='../../js/main.min.js')
-      link(rel='stylesheet', href='../../css/main.css')
-   body
-      // Отображаем контент страницы
-      block content
+include layout-components/headNoRMD
+include layout-components/header
+include layout-components/headerPopupBubble
+include layout-components/giftBanner
+include layout-components/rightColumn
+include layout-components/footerMenu
+
+html(xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xmlns:v="http://rdf.data-vocabulary.org/#" lang="ru")
+	head
+		title= title
+		if (description)
+			meta(name="description" content= description)
+		+headNoRMD()
+	body(topmargin="0" rightmargin="0" marginwidth="0" marginheight="0" leftmargin="0" bottommargin="0" onload="init()")
+		+header()
+		#main-div.main-div.fix-max-width.page-wrap-with_new_header
+			+giftBanner()
+			.main-div_wrap
+				.footer_bot_stick
+					#main.main
+						#container
+							#breadcrumbs.breadcrumbs(xmlns:v="http://rdf.data-vocabulary.org/")
+							#master_page_div
+								block content
+								.cont_seo_idx
+						// При параметре rcol = 1 отобразим правле меню статьиa
+						if (rcol)
+							+rightColumn()
+		+footerMenu()
+		.header-popup(data-header_popup="user")
+			a.close
+			.header-popup__inner
+				.popup-user
+					.popup-user__cash
+						.popup-user__cash-header Состояние счёта:
+						.popup-user__cash-money
+							span.popup-user__cash-summ
+								| 9999,01 
+								span.litres_ruble ₽
+						.popup-user__cash-button
+							a#popup-user__cash-button__button.coolbtn.popup-user__cash-button__button(href="/pages/put_money_on_account/" rel="a_")
+								u
+								| Пополнить
+								s
+					ul.popup-user__menu
+						li.popup-user__menu-item
+							a(href="/pages/my_settings/") Настройки
+						li.popup-user__menu-item
+							a(href="/pages/my_account/") Операции по счёту
+						li.popup-user__menu-item
+							a(href="/pages/show_referral_user_stats/") Покупки друзей
+						li.popup-user__menu-item.popup-user__menu-exit
+							a(href="/pages/logoff/") Выйти
+		#login-bubble.header-popup.header-popup__login-popup(data-header_popup="login")
+			.header-popup__inner
+				// noindex
+				.login-popup
+					form#login-popup__form.login-popup__form(action="/" method="post")
+						#login-popup__steps
+							.login-popup__step(data-step="welcome")
+								.login-popup__block.login-popup__head Вход или регистрация
+								.login-popup__step-content
+									.login-popup__block.login-popup__socials
+										.login-popup__social.social-vk
+											.login-popup__social-link(title="Войти, используя аккаунт ВКонтакте" data-social="vk")
+										.login-popup__social.social-fb
+											.login-popup__social-link(title="Войти, используя аккаунт facebook" data-social="fb")
+										.login-popup__social.social-ok
+											.login-popup__social-link(title="Войти, используя аккаунт Одноклассники" data-social="ok")
+										.login-popup__social.social-tw
+											.login-popup__social-link(title="Войти, используя аккаунт twitter" data-social="tw")
+										.login-popup__social-link.social-more
+									.login-popup__block.login-popup__buttons-block
+										a.login-popup__button.btn.btn_orange.login-popup__button-choose(href="#" data-type="email") Электронная почта
+										a.login-popup__button.btn.login-popup__button-choose(href="#" data-type="phone") Номер телефона
+									.login-popup__block.login-popup__step-welcome-text
+										| Используя ЛитРес, вы соглашаетесь с 
+										a.terms-of-service(href="/pages/litres_oferta/" target="_blank") условиями обслуживания
+							.login-popup__step-footer
+								a.login-popup__button.btn.login-popup__button-choose(href="#" data-type="email" data-library="true") Вход по читательскому билету
+						input(type="hidden" name="csrf" value="206348:1546973821:14767ed608ae113da1dfc294a02666d72a53932a751336161f5c18d2e29eb4c1")
+						input#ref_url(name="ref_url" type="hidden" value="/partners/")
+					.login-popup__loader
+						svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52px" height="54px" viewbox="0 0 52 54" version="1.1")
+							rect(fill="#FF4C00" x="0" y="15" width="52" height="39")
+							rect(fill="#CF3E00" opacity="0.900000036" x="3" y="51" width="46" height="3")
+							polygon(fill="#C7C6C1" points="26 13 49.5735685 12.2915037 49.5735685 51.2915037 26 52")
+							polygon(fill="#C7C6C1" points="26 13 48.686 10.8526 48.686 49.8526 26 52")
+							animate(begin="0s" fill="freeze" attributename="points" dur="300ms" repeatcount="indefinite" to="26 13 44.372231 3.8589904 44.372231 42.8589904 26 52")
+							animate(begin="0s" fill="freeze" attributename="fill" dur="300ms" repeatcount="indefinite" to="#D9D8D2")
+							polygon(fill="#D9D8D2" points="26 13 43.0099 3.23103 43.0099 42.231 26 52")
+							animate(begin="0s" fill="freeze" attributename="points" dur="300ms" repeatcount="indefinite" to="26 13 36.3883757 0.178966842 36.3883757 39.1789668 26 52")
+							animate(begin="0s" fill="freeze" attributename="fill" dur="300ms" repeatcount="indefinite" to="#EDECE6")
+							polygon(fill="#EDECE6" points="26 13 35.3625 0.198383 35.3625 39.1984 26 52")
+							animate(begin="0s" fill="freeze" attributename="points" dur="300ms" repeatcount="indefinite" to="26 13 30.3765696 0.292749915 30.3765696 39.2927499 26 52")
+							animate(begin="0s" fill="freeze" attributename="fill" dur="300ms" repeatcount="indefinite" to="#F2F1EB")
+							polygon(fill="#F2F1EB" points="26 13.3413 29.6298 0.40667 29.6298 39.6051 26 52.3413")
+							animate(begin="0s" fill="freeze" attributename="points" dur="300ms" repeatcount="indefinite" to="26 15 26 0.960355416 26 41.1230808 26 54")
+							animate(begin="0s" fill="freeze" attributename="fill" dur="300ms" repeatcount="indefinite" to="#F2F1EB")
+							polygon#Rectangle-2(fill="#C7C6C1" points="26 13 26 52 2.42643155 51.2915037 2.42643155 12.2915037")
+							polygon(fill="#D9D8D2" points="26 13 26 52 6.74021 44.2979 6.74021 5.29791")
+							animate(begin="0s" fill="freeze" attributename="points" dur="300ms" repeatcount="indefinite" to="26 13 26 52 2.42643155 51.2915037 2.42643155 12.2915037")
+							animate(begin="0s" fill="freeze" attributename="fill" dur="300ms" repeatcount="indefinite" to="#C7C6C1")
+							polygon(fill="#EDECE6" points="26 13 26 52 14.2493 39.8069 14.2493 0.806926")
+							animate(begin="0s" fill="freeze" attributename="points" dur="300ms" repeatcount="indefinite" to="26 13 26 52 7.62776902 42.8589904 7.62776902 3.8589904")
+							animate(begin="0s" fill="freeze" attributename="fill" dur="300ms" repeatcount="indefinite" to="#D9D8D2")
+							polygon(fill="#F2F1EB" points="26 13 26 52 20.5976 39.2733 20.5976 0.273334")
+							animate(begin="0s" fill="freeze" attributename="points" dur="300ms" repeatcount="indefinite" to="26 13 26 52 15.6116243 39.1789668 15.6116243 0.178966842")
+							animate(begin="0s" fill="freeze" attributename="fill" dur="300ms" repeatcount="indefinite" to="#EDECE6")
+							polygon(fill="#F2F1EB" points="26 13 26 52 24.9409 39.2928 24.9409 0.29275")
+							animate(begin="0s" fill="freeze" attributename="points" dur="300ms" repeatcount="indefinite" to="26 13 26 52 21.6234304 39.2927499 21.6234304 0.292749915")
+					.login-popup__all-socials
+						a.login-popup__all-socials-close
+						.login-popup__block.login-popup__head Вход или регистрация
+						.login-popup__all-socials-list
+							.login-popup__block.login-popup__social-container
+								.login-popup__social-link(title="Войти, используя аккаунт ВКонтакте" data-social="vk")
+								.login-popup__social-pic.login-popup__social-pic_vk
+								.login-popup__social-title ВКонтакте
+							.login-popup__block.login-popup__social-container
+								.login-popup__social-link(title="Войти, используя аккаунт Facebook" data-social="fb")
+								.login-popup__social-pic.login-popup__social-pic_fb
+								.login-popup__social-title Facebook
+							.login-popup__block.login-popup__social-container
+								.login-popup__social-link(title="Войти, используя аккаунт Одноклассники" data-social="ok")
+								.login-popup__social-pic.login-popup__social-pic_ok
+								.login-popup__social-title Одноклассники
+							.login-popup__block.login-popup__social-container
+								.login-popup__social-link(title="Войти, используя аккаунт Twitter" data-social="tw")
+								.login-popup__social-pic.login-popup__social-pic_tw
+								.login-popup__social-title Twitter
+							.login-popup__block.login-popup__social-container
+								.login-popup__social-link(title="Войти, используя аккаунт Яндекс" data-social="ya")
+								.login-popup__social-pic.login-popup__social-pic_ya
+								.login-popup__social-title Яндекс
+							.login-popup__block.login-popup__social-container
+								#header_googleplus_login.login-popup__social-link(title="Войти, используя аккаунт Google" data-social="google" data-gapiattached="true")
+									.login-popup__social-pic.login-popup__social-pic_google
+									.login-popup__social-title Google
+							.login-popup__block.login-popup__social-container
+								.login-popup__social-link(title="Войти, используя аккаунт Mail.ru" data-social="mailru")
+								.login-popup__social-pic.login-popup__social-pic_mailru
+								.login-popup__social-title Mail.ru
+						.login-popup__step-back
+							span.login-popup__block.login-popup__step-back-link.close-socials Назад
+				// /noindex
+				script(type="text/javascript").
+					litres.loadCss('https://www.litres.ru/static/litres/modules/authorization/css/LoginPopup.css?120683');
+					litres.loadCss('https://www.litres.ru/static/litres/css/p/module_country.css');
+					litres.loadCss('https://www.litres.ru/static/litres/modules/phonecodes/css/phonecodes.css?117737');
+					litres.loadJs('https://www.litres.ru/static/jquery_plugs/jquery.mask.js?104901');
+					litres.loadJs('https://www.litres.ru/static/litres/modules/authorization/js/Login.js?120683', function () {
+					litres.loadJs('https://www.litres.ru/static/litres/modules/phonecodes/js/phonecodes.js?120248', function () {
+						//litres.loadJs('https://www.litres.ru/static/litres/modules/authorization/js/LoginPopup.js?120683');
+						});
+					});
+		script(type="text/javascript" src="https://www.litres.ru/static/jquery_plugs/jquery.mask.js?104901")
+		script(type="text/javascript" src="https://www.litres.ru/static/litres/modules/authorization/js/Login.js?120683")
+		+headerPopupBubble()
+		.test
+		script(language="JavaScript" src="https://www.litres.ru/static/litres/modules/scrollbar/js/scrollbar.js?121065" type="text/javascript")
+		script(type="text/javascript" src="https://www.litres.ru/static/litres/modules/no-cover/js/no-cover.js")
+		script(type="text/javascript" src="https://www.litres.ru/static/jquery_plugs/dotdotdot/jquery.dotdotdot.min.js?60850")
+		script(type="text/javascript" src="https://www.litres.ru/static/litres/modules/spam-tickets/js/spam-tickets.js?117290")
