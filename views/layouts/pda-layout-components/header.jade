@@ -1,0 +1,97 @@
+mixin header()
+   .header.ab-container.header__unreg
+      .header__wrapper
+         .header__main-block
+            .header__logo
+               a.header__logo-pic(href="/")
+            .header__function-block
+               .header__search
+                  form#header__search-form.header__search-form(method="get" action="/pages/rmd_search/")
+                     span.header__search-wrapp
+                        input#q.header__search-form-input.input_text(type="text" value="" name="q" placeholder="Книга или автор" maxlength="150" autocomplete="off")
+                        #sfac_cont
+                           #nspotlight.nspotlight
+                        span.header__search-form-input-clean
+                     span.header__search-wrapp
+                        button#go.header__search-form-button.btn.btn_black(data-disabled="disabled") Найти
+               .header__user-blocks.header__user-blocks_unreg
+                  #header__user-login.header__user.new-user-login-btn
+                     a.header__user-link.clicktag(href="/pages/login/" data-clicktag-id="go_login")
+                        span.header__user-avatar.header__user-avatar_dummy
+                        span.header__user-container
+                           span.header__user-text Войти
+                  .header__bell-block.spam-tickets
+                     .header__bell.clicktag(data-msg-count="6" data-clicktag-id="head_bell")
+                        span.header__sticker(data-count="6" style="display: inline-block;") 6
+                  .header__my-button-block
+                     a.header__my-button.btn.btn_green(href="/pages/my_books_all/") Мои книги
+                     .popup_link_sticker(data-count="0" style="display: none;") 0
+         .header__menu
+            ul.header__menu-tabs
+               li.header__menu-tab(data-type="books" data-goal="ebookmenu")
+                  span.header__menu-text Книги
+               li.header__menu-tab(data-type="audio_books" data-goal="abookmenu")
+                  span.header__menu-text Aудиокниги
+               li.header__menu-tab.header__menu-tab__activate-coupon
+                  a.header__menu-text(href="/pages/put_money_on_account/?descr=18") Промокод
+               li.header__menu-tab(data-type="more" style="display: inline-block;")
+                  span.header__menu-text Ещё...
+               li.header__menu-tab.header__menu-tab__full-version-link
+                  a.header__menu-text(href="//www.litres.ru/itogi-2018-goda/?no_redirect=1") Полная версия сайта
+               li.header__menu-tab.header__menu-tab__mobile-app
+                  a.header__menu-text(href="/app3/") Мобильное приложение
+            ul.header__sub-menu(data-type="books")
+               li.header__sub-menu-item(data-goal="genreebook")
+                  a.header__menu-text(href="/pages/new_genres/") Жанры
+               li.header__sub-menu-item(data-goal="newebook")
+                  a.header__menu-text(href="/novie/") Новинки
+               li.header__sub-menu-item(data-goal="popebook")
+                  a.header__menu-text(href="/luchshie-knigi/") Популярное
+               li.header__sub-menu-item(data-goal="chpebook")
+                  a.header__menu-text(href="/chto-chitat/") Что почитать?
+            ul.header__sub-menu(data-type="audio_books")
+               li.header__sub-menu-item(data-goal="genreabook")
+                  a.header__menu-text(href="/pages/new_genres/?atype=audio") Жанры
+               li.header__sub-menu-item(data-goal="newabook")
+                  a.header__menu-text(href="/novie/audioknigi/") Новинки
+               li.header__sub-menu-item(data-goal="popabook")
+                  a.header__menu-text(href="/luchshie-knigi/audioknigi/") Популярное
+            ul.header__sub-menu(data-type="more")
+               li.header__sub-menu-item.header__sub-menu-item_hidden.header__menu-tab__activate-coupon
+                  a.header__menu-text(href="/pages/put_money_on_account/?descr=18") Промокод
+               li.header__sub-menu-item
+                  a.header__menu-text(href="/kollekcii-knig/predzakaz-so-skidkoy-30/") Предзаказ со скидкой 30%
+               li.header__sub-menu-item
+                  a.header__menu-text(href="/podborki/") Подборки
+               li.header__sub-menu-item
+                  a.header__menu-text(href="/kollekcii-knig/prochti-pervym/") Прочти первым
+               li.header__sub-menu-item(data-goal="luchshie_avtori")
+                  a.header__menu-text(href="/luchshie-avtori/") Популярные авторы
+               li.header__sub-menu-item
+                  a.header__menu-text(href="https://support.litres.ru/hc/ru") Служба поддержки
+               li.header__sub-menu-item.header__sub-menu-item_hidden
+                  a.header__menu-text(href="//www.litres.ru/itogi-2018-goda/?no_redirect=1") Полная версия сайта
+               li.header__sub-menu-item.header__sub-menu-item_gift-cards
+                  a.header__menu-text(href="/kniga-luchshiy-podarok/") Подарочные карты
+               li.header__sub-menu-item.header__sub-menu-item_mobile-app
+                  a.header__menu-text(href="/app3/") Мобильное приложение
+         .header__info
+            .header__info-wrap
+               .header__info-unreg
+                  .header__info-сlose
+                  .header__info-text
+                     .header__info-text-header_gray Знаете ли вы, что...
+                     .header__info-text-header.header__info-text-header_big Присоединяясь к ЛитРес, вы заботитесь об экологии
+                     .header__info-text-links
+                        a.header__info-links-reg.btn.btn_orange.clicktag(href="/pages/registration/" data-clicktag-id="bell_reg_click") Регистрация
+                        a.header__info-links-enter.btn.btn_black(href="/pages/login/") Вход
+            .header__info-spam-tickets
+   .ab-container.newyear_gift_close
+      span#banner__newyear_gift_close.banner__newyear_gift_close
+   a#banner__newyear_gift.banner__newyear_gift(href="/kniga-luchshiy-podarok/")
+      .ab-container
+         span.banner__newyear_gift_title
+            | Новогодние 
+            br
+            | подарочные карты!
+         span.banner__newyear_gift_btn Выбрать

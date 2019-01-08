@@ -1,0 +1,105 @@
+mixin head()
+   meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+   meta(charset="utf-8")
+   title Итоги 2018 года
+   meta(name="description" content="Литрес: один клик до книг")
+   link(rel="StyleSheet" href="https://pda.litres.ru/static/pda/finger.css?120322" type="text/css")
+   link(rel="StyleSheet" type="text/css" href="https://pda.litres.ru/static/pda/css/advanced_css3.css?100171")
+   link(rel="StyleSheet" type="text/css" href="https://pda.litres.ru/static/pda/css/genres_tree.css?93480")
+   link(rel="stylesheet" href="https://pda.litres.ru/static/pda_2.0/css/header.css?118958" type="text/css")
+   //script(type="text/javascript" async="" src="https://pda.litres.ru/static/gglcomp.js?117937")
+   //script(type="text/javascript" async="" src="https://pda.litres.ru/static/code_as.js?51760")
+   script(language="JavaScript" src="https://pda.litres.ru/static/hub/js/csrf.js?118785" type="text/javascript")
+   style(type="text/css" data-source="User JavaScript and CSS extension").
+      #view_branch {
+      width: 400px;
+      }
+      span.bug_tracker_ticket_branch {
+      width: 40%;
+      }
+      span.bug_tracker_ticket_branch.edit {
+      width: 40%;
+      }
+      .bug_tracker input[type="text"] {
+      width: 400px;
+      }
+   script.
+      CSRF.init(["282608:1546984026:5ae0a6597195621303e4772c41436671a4c0ebd3c40f0fc28d9223e2d953ef5d","573941:1546984026:0df0f30f69be9b52effa9789d59fc0ff1ec9e8beac9222b5dee8f952a5e92aac","89585:1546984026:de5d0bd08b7f5b18c9f12d715db6ab545157a7429bd57f1dc72359208bae4107","50094:1546984026:0b76fd7cc8610d0849d0effd9d4ca209cd094953d4bd5a827935c43dd01b69ea","588027:1546984026:4f73c559bce002618c868496184de6f6db68cd95bcdeed61a7b1ff4d4686d9ce","52110:1546984026:3fc4e5be097e90288c0022956aeec318625218402dcf4b5f01960743ce31c07a"], 0);
+   script(type="text/javascript").
+      var UserLastPayment = '';
+      var UserBrowser = 'chrome';
+      var ABTests = {};
+      var litres = {
+      xportal: true,
+      pda: true,
+      user: 0,
+      userCountry: 'RU',
+      name: 'Anonymous',
+      lfrom: '',
+      lib_mode: 0,
+      tests: {},
+      platform: 'chrome',
+      webpush_status: '1',
+      uilang: 'ru',
+      loadCss: function (url) {
+      var link = document.createElement("link");
+      link.type = "text/css";
+      link.rel = "stylesheet";
+      link.href = url;
+      document.getElementsByTagName("head")[0].appendChild(link);
+      },
+      inBasket: 0,
+      inWishlist: 0,
+      loadJs: function (url, callback) {
+      if (document.querySelector('script[src="' + url + '"]')) {
+      if (callback) {
+      callback();
+      }
+      return;
+      }
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = url;
+      if (callback) {
+      script.onload = function () {
+      callback();
+      };
+      }
+      document.body.appendChild(script);
+      }
+      };
+   script(language="javascript").
+      ScSrc = 'https://pda.litres.ru/static/code_as.js?51760';
+   script(language="JavaScript" src="https://pda.litres.ru/static/code.js?119444" type="text/javascript")
+   script(language="JavaScript" src="https://pda.litres.ru/static/js/editor.js?109532" type="text/javascript")
+   script(language="JavaScript" src="https://pda.litres.ru/static/gu_ajax/gu_ajax.js?120508" type="text/javascript")
+   script(type="text/javascript" language="JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js")
+   script(type="text/javascript" language="JavaScript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js")
+   script(language="JavaScript" src="https://pda.litres.ru/static/js/i18n/ru/default.js?121172" type="text/javascript")
+   script(language="JavaScript" src="https://pda.litres.ru/static/js/i18n/gettext.js" type="text/javascript")
+   script(language="JavaScript" type="text/javascript").
+      var __l = __ln = function (msgid) { return msgid;};
+      var i18nGettext = new Gettext({ 'domain' : 'default',
+      'locale_data' : json_locale_data });
+      __l=function (msgid,args) {
+      return i18nGettext.strhashargs(i18nGettext.gettext(msgid),args);
+      };
+      __ln=function (msgid, msgid_plural,count,args) {
+      return i18nGettext.strhashargs(i18nGettext.ngettext(msgid, msgid_plural, count),args);
+      };
+   script(language="JavaScript" src="https://pda.litres.ru/static/sociallogin.js?119868" type="text/javascript")
+   script(type="text/javascript" src="https://pda.litres.ru/static/pda/js/jquery/overlay/overlay.js?63713")
+   script(type="text/javascript" src="https://pda.litres.ru/static/jquery_plugs/jquery.countdown.js")
+   script(type="text/javascript" src="https://pda.litres.ru/static/jquery_plugs/moment/moment.min.js?59673")
+   script(src="/static/new/js/code1.js?120145" type="text/javascript")
+   script(type="text/javascript").
+      $(window).load(function () {
+      litres.loadJs('https://pda.litres.ru/static/pda_2.0/js/search.js?118751');
+      });
+   script(type="text/javascript" src="https://pda.litres.ru/static/js/s/cms.js?117758" language="javascript")
+   link(rel="SHORTCUT ICON" href="https://pda.litres.ru/static/pda/favicon.ico")
+   meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0")
+   meta(name="MobileOptimized" content="100%")
+   link(rel="manifest" href="https://pda.litres.ru/static/manifest.json")
+   //link(type="text/css" rel="stylesheet" href="https://pda.litres.ru/static/pda_2.0/modules/spam-tickets/css/spam-tickets.css?101068")
+   link(type="text/css" rel="stylesheet" href="https://pda.litres.ru/static/pda_2.0/modules/no-cover/css/no-cover.css")

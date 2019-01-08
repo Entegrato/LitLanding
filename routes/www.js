@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('pages/www-index', {
-      title: "WWW | rmd: " + ((req.query.rmd == 1) ? 1 : 0) + ' | ' + ((req.query.rcol == 1) ? 1 : 0),
+      title: "WWW" + ((req.query.rmd) ? ' | RMD' : '') + '' + ((req.query.rcol) ? ' | RCol' : ''),
       rmd: ((req.query.rmd) ? true : false),
       rcol: ((req.query.rcol) ? true : false)
     });

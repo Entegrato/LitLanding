@@ -1,13 +1,45 @@
-doctype html
-html
-   head
-      title= title
-      if (description)
-         meta(name="description" content= description)
-      meta(charset='utf-8')
-      meta(name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1')
-      script(src='../../js/main.min.js')
-      link(rel='stylesheet', href='../../css/main.css')
-   body
-      // Отображаем контент страницы
-      block content
+include pda-layout-components/head
+include pda-layout-components/header
+
+html(xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xmlns:v="http://rdf.data-vocabulary.org/#")
+	head
+		title= title
+		if (description)
+			meta(name="description" content= description)
+		if (rmd)
+			link(rel="StyleSheet" href="https://pda.litres.ru/static/pda_2.0/css/p/cms.css" type="text/css")
+		+head()
+	body(onload="init()")
+		script(language="JavaScript" type="text/javascript").
+			var GUJ = new GUAjax({Connections:2});
+		#wrapper
+			+header()
+			if (rmd)
+				#main-page.page
+					.main-page-div
+						.ab-container
+							//script(src="https://pda.litres.ru/static/litres/js/p/cms.js?116361")
+							.ab-container.cms_wrapper(itemscope="" itemtype="http://schema.org/Article")
+								block content
+			else
+				.ab-container
+					.cms.ab-padding
+						.news_body
+							block content
+					#breadcrumbs.breadcrumbs(xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:v="http://rdf.data-vocabulary.org/" xmlns:ltr="LTR")
+					.litres-block
+						.block
+							.corn
+								.r
+									a(href="https://support.litres.ru/hc/ru")
+										img(alt="" src="https://pda.litres.ru/static/pda/img/comm/icon_help.svg")
+										| Служба поддержки
+				script(language="JavaScript" type="text/javascript").
+					if(CatchClick){$('.clicktag').bind('click',CatchClick);}
+		script(type="text/javascript" language="JavaScript").
+			InitBodyEnd();
+		iframe(name="_ym_native" frameborder="0" style="opacity: 0; width: 0px; height: 0px; position: absolute; left: 100%; bottom: 100%; border: 0px !important;")
+		script(type="text/javascript" src="https://pda.litres.ru/static/pda_2.0/js/search.js?118751")
+		script(type="text/javascript" src="https://pda.litres.ru/static/pda_2.0/modules/no-cover/js/no-cover.js")
+		script(type="text/javascript" src="https://pda.litres.ru/static/jquery_plugs/dotdotdot/jquery.dotdotdot.min.js?60850")
+		//script(type="text/javascript" src="https://pda.litres.ru/static/pda_2.0/modules/spam-tickets/js/spam-tickets.js?117290")
