@@ -15,9 +15,9 @@ html(xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" x
 		+head()
 	body(topmargin="0" rightmargin="0" marginwidth="0" marginheight="0" leftmargin="0" bottommargin="0" onload="init()")
 		+header()
-		#main-div.main-div.fix-max-width.page-wrap-with_new_header
-			+giftBanner()
-			if (rmd)
+		if (rmd)
+			#page-wrap.page-wrap.page-wrap-with_new_header
+				+giftBanner()
 				.page
 					.new-container
 						ul#breadcrumbs.breadcrumbs(xmlns:v="http://rdf.data-vocabulary.org/#")
@@ -29,8 +29,9 @@ html(xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" x
 							// При параметре rcol = 1 отобразим правле меню статьиa
 						if (rcol)
 							+rightColumn()
-
-			else
+		else
+			#main-div.main-div.fix-max-width.page-wrap-with_new_header
+				+giftBanner()
 				.main-div_wrap
 					.footer_bot_stick
 						#main.main
