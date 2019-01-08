@@ -98,7 +98,7 @@ gulp.task('work', [
 	gulp.watch(src + '/styles/**/*.styl', ['compilate-css', browserSync.reload]);
 	gulp.watch(src + '/inlineJS/**/*.js', ['js-inline', browserSync.reload]);
 	gulp.watch('views/**/*.jade', browserSync.reload);
-	gulp.watch('db/**/*.json', browserSync.reload);
+	gulp.watch('views/**/*.json', browserSync.reload);
 	gulp.watch('routes/**/*.js', browserSync.reload);
 	log.info("GULPED! ---> Work, Bitch! Please!");
 });
