@@ -13,6 +13,13 @@ mixin cms-page-content()
 	h2 Тест модуля 2
 	+module2
 
+	//.hello
+		h2 Вот так комментим прямо всё с корневой ноды, Jade умеет
+		.node-1
+			.node-2
+				.node-3
+					p Это далекая внутренняя нода
+
 	script.
 		console.log(1+1)
 
